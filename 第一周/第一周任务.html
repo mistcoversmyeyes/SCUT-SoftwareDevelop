@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\admin\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:////home/mistcovers/.vscode-server/extensions/shd101wyy.markdown-preview-enhanced-0.8.18/crossnote/dependencies/katex/katex.min.css">
       
       
       
@@ -68,6 +68,46 @@
 .markdown-preview.markdown-preview .token.punctuation {
   color: #d4d4d4;
   /* 操作符和标点符号浅灰色 */
+}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  /* 使用默认样式，覆盖全局配置 */
+  all: initial;
+  /* 重置所有CSS属性到初始值 */
+  /* 重置行内代码块样式 */
+  /* 重置多行代码块样式 */
+  /* 重置语法高亮样式 */
+}
+.markdown-preview.markdown-preview :not(pre) > code {
+  color: inherit;
+  /* 恢复默认文本颜色 */
+  background-color: rgba(0, 0, 0, 0.06);
+  /* 恢复默认背景 */
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.markdown-preview.markdown-preview pre[class*=language-] {
+  background-color: #f6f8fa;
+  /* 恢复默认背景 */
+  color: #24292e;
+  /* 恢复默认文本颜色 */
+  padding: 1em;
+  border-radius: 3px;
+  overflow: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.markdown-preview.markdown-preview .token.punctuation,
+.markdown-preview.markdown-preview .token.keyword,
+.markdown-preview.markdown-preview .token.string,
+.markdown-preview.markdown-preview .token.function,
+.markdown-preview.markdown-preview .token.comment,
+.markdown-preview.markdown-preview .token.number,
+.markdown-preview.markdown-preview .token.boolean,
+.markdown-preview.markdown-preview .token.operator {
+  color: inherit;
+  /* 恢复默认颜色 */
 }
 
       </style>
