@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/yuming/.vscode-server/extensions/shd101wyy.markdown-preview-enhanced-0.8.18/crossnote/dependencies/katex/katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\admin\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -14,8 +14,61 @@
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 /* Markdown Preview Enhanced 自定义样式 */
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  /* 行内代码块样式（黑色背景下） */
+  /* 多行代码块样式 */
+  /* 括号颜色（统一设置） */
+  /* 高亮语法的具体配色 */
+}
+.markdown-preview.markdown-preview :not(pre) > code {
+  color: #ff6b6b;
+  /* 红字强调 */
+  background-color: #2e2a2a;
+  /* 浅红背景 */
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+.markdown-preview.markdown-preview pre[class*=language-] {
+  background-color: #1e1e1e;
+  /* 深灰背景，与 VS Code 一致 */
+  color: #d4d4d4;
+  /* 默认字体颜色 */
+  padding: 1em;
+  border-radius: 8px;
+  overflow: auto;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+.markdown-preview.markdown-preview .token.punctuation {
+  color: #d4d4d4;
+  /* 浅灰，与其他标点符号一致 */
+}
+.markdown-preview.markdown-preview .token.keyword {
+  color: #569cd6;
+  /* 蓝色关键字 */
+}
+.markdown-preview.markdown-preview .token.string {
+  color: #ce9178;
+  /* 橙色字符串 */
+}
+.markdown-preview.markdown-preview .token.function {
+  color: #dcdcaa;
+  /* 浅黄色函数名 */
+}
+.markdown-preview.markdown-preview .token.comment {
+  color: #6a9955;
+  /* 注释绿色 */
+}
+.markdown-preview.markdown-preview .token.number,
+.markdown-preview.markdown-preview .token.boolean {
+  color: #b5cea8;
+  /* 数字和布尔值浅绿色 */
+}
+.markdown-preview.markdown-preview .token.operator,
+.markdown-preview.markdown-preview .token.punctuation {
+  color: #d4d4d4;
+  /* 操作符和标点符号浅灰色 */
+}
 
       </style>
       <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
@@ -138,17 +191,22 @@
       </details>
     <details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
-          <a href="#选择项目管理工具" class="md-toc-link"><p>选择项目管理工具</p>
+          <a href="#学习在-android-studio-使用git-进行项目管理" class="md-toc-link"><p>学习在 Android Studio 使用git 进行项目管理</p>
 </a>
           </summary>
         <div>
           <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#git" class="md-toc-link">
-            <p>git</p>
+          <a href="#学习本地仓库进行版本管理" class="md-toc-link">
+            <p>学习本地仓库进行版本管理</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#" class="md-toc-link">
-            
+          <a href="#学习使用远程仓库进行协作并处理冲突-jetbrains-ide-实战" class="md-toc-link">
+            <p>学习使用远程仓库进行协作并处理冲突 (JetBrains IDE 实战)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#常见协作问题与-jetbrains-ide-解决方案" class="md-toc-link">
+            <p>常见协作问题与 JetBrains IDE 解决方案</p>
+
           </a></div>
         </div>
       </details>
@@ -376,9 +434,91 @@ Running on Windows 10.0.22631
 <h3 id="android-studio-汉化">Android Studio 汉化 </h3>
 <p><a href="https://github.com/sollyu/AndroidStudioChineseLanguagePack?tab=readme-ov-file">参考这个GitHub仓库链接</a></p>
 <h3 id="android-虚拟机配置与使用">Android 虚拟机配置与使用 </h3>
-<h2 id="选择项目管理工具">选择项目管理工具 </h2>
-<h3 id="git">git </h3>
-<h3></h3>
+<h2 id="学习在-android-studio-使用git-进行项目管理">学习在 Android Studio 使用git 进行项目管理 </h2>
+<p>以下教程基于如下平台与资料：</p>
+<ul>
+<li><a href="https://learngitbranching.js.org/">Learning Git Branch</a>：一个交互式的学习github命令行操作的网站，强烈推荐。</li>
+<li><a href="https://git-scm.com/doc">Git doc</a>: Git 官方文档</li>
+<li><a href="https://www.jetbrains.com/zh-cn/help/idea/2025.1/version-control-integration.html">JetBrains IDEs Git Integration Documentation</a>: JetBrains 家 IDE 内部集成Git工具的官方文档。</li>
+<li></li>
+</ul>
+<h3 id="学习本地仓库进行版本管理">学习本地仓库进行版本管理 </h3>
+<ul>
+<li><strong>在 JetBrains IDE 中初始化 Git 仓库</strong></li>
+<li><strong>理解 IDE 中的暂存区 (Staging Area / Changelists)</strong></li>
+<li><strong>提交更改 (Commit) 与查看历史 (Log)</strong>
+<ul>
+<li>如何使用 IDE 的提交界面</li>
+<li>编写规范的提交信息</li>
+<li>通过 IDE 查看提交历史、分支图</li>
+</ul>
+</li>
+<li><strong>分支管理 (Branching)</strong>
+<ul>
+<li>在 IDE 中创建、切换、合并和删除分支</li>
+</ul>
+</li>
+<li><strong>标签管理 (Tagging)</strong>
+<ul>
+<li>在 IDE 中创建和推送标签</li>
+</ul>
+</li>
+</ul>
+<h3 id="学习使用远程仓库进行协作并处理冲突-jetbrains-ide-实战">学习使用远程仓库进行协作并处理冲突 (JetBrains IDE 实战) </h3>
+<ul>
+<li><strong>连接到远程仓库</strong>
+<ul>
+<li>在 IDE 中克隆 (Clone) 远程仓库</li>
+<li>在 IDE 中添加远程仓库 (Remotes)</li>
+</ul>
+</li>
+<li><strong>基本的远程操作</strong>
+<ul>
+<li><strong>推送 (Push)</strong>：将本地提交推送到远程仓库
+<ul>
+<li>使用 IDE 的 Push 对话框</li>
+</ul>
+</li>
+<li><strong>拉取 (Pull)</strong>：从远程仓库获取最新更改并合并
+<ul>
+<li>Fetch 与 Pull 的区别</li>
+<li>在 IDE 中执行 Pull 操作 (Merge vs Rebase)</li>
+</ul>
+</li>
+<li><strong>获取 (Fetch)</strong>：从远程仓库获取最新更改但不合并</li>
+</ul>
+</li>
+<li><strong>协作工作流 (以 Feature Branch Workflow 为例)</strong>
+<ul>
+<li><strong>创建和推送特性分支</strong>：在 IDE 中为新功能或修复创建分支并推送到远程。</li>
+<li><strong>团队成员间的代码同步</strong>：定期 Pull 主分支或开发分支的更新。</li>
+<li><strong>发起合并请求 (Pull Request / Merge Request)</strong>：
+<ul>
+<li>虽然 PR/MR 通常在代码托管平台（如 GitHub, GitLab）上创建，但可以说明如何在 IDE 中准备好分支以供审查。</li>
+<li>如何在 IDE 中检出 (Checkout) 他人的 PR/MR 分支进行审查和测试。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>处理合并冲突 (Conflict Resolution)</strong>
+<ul>
+<li>冲突是如何产生的</li>
+<li><strong>使用 JetBrains IDE 的三方合并工具</strong>：详细步骤说明如何识别冲突文件，并使用 IDE 内置的强大合并工具解决冲突。</li>
+<li>提交解决冲突后的代码</li>
+</ul>
+</li>
+<li><strong>其他有用的协作功能</strong>
+<ul>
+<li><strong>储藏 (Stash)</strong>：在 IDE 中临时保存未完成的更改。</li>
+<li><strong>拣选 (Cherry-pick)</strong>：在 IDE 中选择性地将某些提交应用到当前分支。</li>
+<li><strong>变基 (Rebase)</strong>：在 IDE 中使用 Rebase 功能保持提交历史的整洁（特别是与远程主分支同步时）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="常见协作问题与-jetbrains-ide-解决方案">常见协作问题与 JetBrains IDE 解决方案 </h3>
+<ul>
+<li>例如：推送被拒绝 (Push Rejected) 如何处理等。</li>
+</ul>
 <h2 id="学习使用-java-在安卓平台上开发">学习使用 Java 在安卓平台上开发 </h2>
 <h2 id="项目建模与文档形成">项目建模与文档形成 </h2>
 <h3 id="use-case-model-用例模型">Use-Case Model (用例模型) </h3>
